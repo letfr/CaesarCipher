@@ -19,6 +19,4 @@
 >
 
 ## Fluxograma:
-![Fluxograma](http://pt-br.tinypic.com?ref=2i6knf6" target="_blank"><img src="http://i63.tinypic.com/2i6knf6.jpg);
-
-  
+![Fluxograma](fluxogramaCaesarCipher.png);

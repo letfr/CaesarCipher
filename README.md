@@ -1,8 +1,9 @@
 # CIFRA DE CÉSAR
-Descrição do projeto:
+## Descrição do projeto
   A cifra de César consiste em uma criptografia simples. É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra letra baseado em um número fixo de deslocamento. Nessa aplicação existem duas opções: CRIPTOGRAFAR e DESCRIPTOGRAFAR, que apresenta o resultado com base no número de deslocamento. 
+  Observação: Os espaços são substituídos por "#".
   
-Instruções de uso:
+## Instruções de uso:
   Ao iniciar a aplicação, será apresentado as seguintes opções:
   1 - Criptografar
   2 - Descriptografar
@@ -11,7 +12,13 @@ Instruções de uso:
   Ao digitar a opção 9, a aplicação será finalizada.
   Qualquer caracter além das três opções apresentadas (1,2,9), não será aceita. 
  
-Pseudocódigo:
+## Pseudocódigo:
+>
+>
+>
+>
 
-Fluxograma:
+## Fluxograma:
+![Fluxograma](http://pt-br.tinypic.com?ref=2i6knf6" target="_blank"><img src="http://i63.tinypic.com/2i6knf6.jpg);
+
   

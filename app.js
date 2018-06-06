@@ -22,7 +22,7 @@ function cipher(){
     var result = alert("A sua mensagem criptografada com um deslocamento de " + displacement + " é:\n" + cipherMessage.join("") + "\n\n\nMensagem original:\n" + message);
     return result;
   } else {
-    return undefined;
+    return alert(undefined);
   }
 }
 
@@ -37,10 +37,10 @@ function decipher(){
     for (var i = 0; i < message.length; i++){
       toASCII = message[i].charCodeAt();
       if(toASCII >= 65 && toASCII <= 90){
-        letter = (toASCII - 65 - displacement) % 26 + 65;
+        letter = (toASCII - 90 - displacement) % 26 + 90;
         decipherMessage.push(String.fromCharCode(letter));
       } else if(toASCII >= 97 && toASCII <= 122){
-        letter = (toASCII - 97 - displacement) % 26 + 97;
+        letter = (toASCII - 122 - displacement) % 26 + 122;
         decipherMessage.push(String.fromCharCode(letter));
       } else if (toASCII === 35){
         letter = 32;

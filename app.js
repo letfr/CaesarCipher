@@ -87,5 +87,3 @@ if(option === 1){
 } else {
   alert("Opção inválida!");
 };
-
-

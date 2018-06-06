@@ -4,27 +4,38 @@ function cipher(){
   var toASCII = 0;
   var letter = 0;
   var cipherMessage = [];
-  
-  if (message.search(/[^a-zA-Z\s]/) === -1){
+  //VALIDAÇÃO DO INPUT
+  if (message !== "" && !isNaN(displacement) && message.search(/[^a-zA-Z\s]/) === -1){
+    //PERCORRER TODOS OS CARACTERES DE message
     for (var i = 0; i < message.length; i++){
+      //CONVERTER CARACTERES CONFORME TABELA ASCII
       toASCII = message[i].charCodeAt();
       if(toASCII >= 65 && toASCII <= 90){
+        //LETRAS MAIÚSCULAS
         letter = (toASCII - 65 + displacement) % 26 + 65;
         cipherMessage.push(String.fromCharCode(letter));
       } else if(toASCII >= 97 && toASCII <= 122){
+        //LETRAS MINÚSCULAS
         letter = (toASCII - 97 + displacement) % 26 + 97;
         cipherMessage.push(String.fromCharCode(letter));
       } else if (toASCII === 32){
+        //ESPAÇO
         letter = 35;
         cipherMessage.push(String.fromCharCode(letter));
       }
     }
+    //EXIBIÇÃO DO RESULTADO
     var result = alert("A sua mensagem criptografada com um deslocamento de " + displacement + " é:\n" + cipherMessage.join("") + "\n\n\nMensagem original:\n" + message);
     return result;
+  } else if(message === ""){
+    alert("Campo da string vazia!");
+  } else if (isNaN(displacement)){
+    alert("Campo de fator de deslocamento vazio!");
   } else {
-    return alert(undefined);
+    alert(undefined + "\nDigite apenas letras!");
   }
 }
+
 
 function decipher(){
   var message = prompt("O que deseja descriptografar?");
@@ -32,36 +43,47 @@ function decipher(){
   var toASCII = 0;
   var letter = 0;
   var decipherMessage = [];  
- 
-  if (message.search(/[^a-zA-Z\s]/) === -1){
+  //VALIDAÇÃO DO INPUT
+  if (message !== "" && !isNaN(displacement) && message.search(/[^a-zA-Z\s]/) === -1){
+    //PERCORRER TODOS OS CARACTERES DE message
     for (var i = 0; i < message.length; i++){
+      //CONVERTER CARACTERES CONFORME TABELA ASCII
       toASCII = message[i].charCodeAt();
       if(toASCII >= 65 && toASCII <= 90){
+        //LETRAS MAIÚSCULAS
         letter = (toASCII - 90 - displacement) % 26 + 90;
         decipherMessage.push(String.fromCharCode(letter));
       } else if(toASCII >= 97 && toASCII <= 122){
+        //LETRAS MINÚSCULAS
         letter = (toASCII - 122 - displacement) % 26 + 122;
         decipherMessage.push(String.fromCharCode(letter));
       } else if (toASCII === 35){
+        //ESPAÇO
         letter = 32;
         decipherMessage.push(String.fromCharCode(letter));
       }
     }
+    //EXIBIÇÃO DO RESULTADO
     var result = alert("A sua mensagem descriptografada com um deslocamento de " + displacement + " é:\n" + decipherMessage.join("") + "\n\n\nMensagem original:\n" + message);
     return result;
+  } else if(message === ""){
+    alert("Campo da string vazia!");
+  } else if (isNaN(displacement)){
+    alert("Campo de fator de deslocamento vazio!");
   } else {
-    return undefined;
+    alert(undefined + "\nDigite apenas letras!");
   }
 }
 
 var option = parseInt(prompt("❝CIFRA DE CÉSAR❞\nQual a opção desejada?\n❶ Criptografar\n❷ Descriptografar\n❾ Sair"));
 
+//MENU INICIAL COM OPÇÕES
 if(option === 1){
   console.log(cipher());
 } else if (option === 2){
   console.log(decipher());
 } else if (option === 9){
-  exit;
+  window.stop();
 } else {
   alert("Opção inválida!");
 };

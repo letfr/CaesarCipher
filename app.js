@@ -74,7 +74,7 @@ function decipher() {
   }
 }
 
-//MENU INICIAL COM OPÇÕES
+// MENU INICIAL COM OPÇÕES
 do{
   var option = parseInt(prompt('❝CIFRA DE CÉSAR❞\n\nQual a opção desejada?\n❶ Criptografar\n❷ Descriptografar\n❾ Sair'));
   if (option === 1) {

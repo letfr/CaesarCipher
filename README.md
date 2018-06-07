@@ -3,7 +3,7 @@
   A cifra de César consiste em uma criptografia simples. É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra letra baseado em um número fixo de deslocamento. Nessa aplicação existem duas opções: CRIPTOGRAFAR e DESCRIPTOGRAFAR, que apresenta o resultado com base no número de deslocamento. 
   Observação: Os espaços são substituídos por "#".
   
-## Instruções de uso:
+## Instruções:
   Ao iniciar a aplicação, será apresentado as seguintes opções:
   1 - Criptografar
   2 - Descriptografar

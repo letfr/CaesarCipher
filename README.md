@@ -10,7 +10,7 @@
   9 - Sair 
   Ao digitar a opção 1 ou 2, será solicitado a frase que deseja criptografar ou descriptografar, e em seguida um número inteiro para deslocamento. Após inserido, será apresentado o resultado e a frase original digitada.
   Ao digitar a opção 9, a aplicação será finalizada.
-  Qualquer caracter além das três opções apresentadas (1,2,9), não será aceita. 
+  Qualquer caracter além das três opções apresentadas (1, 2, 9), não será aceita. 
  
 ## Fluxograma:
 ![Fluxograma](fluxogramaCaesarCipher.png)
